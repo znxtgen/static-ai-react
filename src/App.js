@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bulma/css/bulma.css';
+import ProfileCard from "./ProfileCard";
+import AlexaImage from './images/alexa.png';
+import GeminiImage from './images/gemini.png';
+import ChatGPTImage from './images/chatgpt.png';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <section className="hero is-primary">
+                <div className="hero-body">
+                    <p className="title">Personal Digital Assistants</p>
+                </div>
+            </section>
+
+            <div className="container">
+                <section className="section">
+                    <div className="columns">
+                        <div className="column is-3">
+                            <ProfileCard
+                            title="Alexa"
+                            handle="@alexa99"
+                            image={AlexaImage}
+                            alt="Alexa Logo"
+                            description="Alexa was created by Amazon and helps you buy things."
+                            />
+                        </div>
+                        <div className="column is-3">
+                            <ProfileCard
+                            title="Gemini"
+                            handle="@gemini89"
+                            image={GeminiImage}
+                            alt="Gemini Logo"
+                            description="Gemini was made by Google. It helps you manage your G-products."
+                            />
+                        </div>
+                        <div className="column is-3">
+                            <ProfileCard
+                            title="ChatGPT"
+                            handle="@gpt6"
+                            image={ChatGPTImage}
+                            alt="ChatGPT Logo"
+                            description="ChatGPT was made by OpenAI and has a few new features up its sleeves."
+                            />
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    );
 }
 
 export default App;
