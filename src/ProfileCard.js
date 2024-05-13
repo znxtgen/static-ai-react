@@ -1,5 +1,4 @@
 function ProfileCard({ title, handle, image, alt, description }) {
-    console.log(title, handle);
     return (
         <div className="card">
             <div className="card-image">
